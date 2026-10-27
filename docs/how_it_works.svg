@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240" role="img" aria-labelledby="t d">
+<title id="t">How SPASIX works</title>
+<desc id="d">Game telemetry, motion cueing, kinematics, control, actuation, the platform: the signal from the game to the motors, then motion from the motors to the seat.</desc>
+<style>
+  .sig { stroke: #ff6a1a; stroke-width: 2.5; fill: none; }
+  .mech { stroke: #9aa1ab; stroke-width: 6; stroke-linecap: round; fill: none; }
+  .tile { fill: #121419; stroke: rgba(255, 255, 255, 0.16); stroke-width: 1.5; }
+  .icon { fill: none; stroke: #c9ced6; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .name { fill: #eef0f3; font: 700 18px Inter, 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif; letter-spacing: -0.01em; }
+  .num { fill: #9aa1ab; font: 600 12px Inter, 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif; letter-spacing: 0.18em; }
+  .dot { fill: #ff6a1a; animation: travel 6s linear infinite; transform-box: view-box; }
+  @keyframes travel {
+    0% { transform: none; fill: #ff6a1a; r: 5px; }
+    79.9% { fill: #ff6a1a; r: 5px; }
+    80.0% { fill: #c9ced6; r: 8px; }
+    100% { transform: translateX(1000px); fill: #c9ced6; r: 8px; }
+  }
+  @media (prefers-reduced-motion: reduce) { .dot { animation: none; opacity: 0; } }
+</style>
+<path class="sig" d="M154 96L246 96"/>
+<path class="sig" d="M354 96L446 96"/>
+<path class="sig" d="M554 96L646 96"/>
+<path class="sig" d="M754 96L846 96"/>
+<path class="mech" d="M954 96L1046 96"/>
+<circle class="dot" cx="100" cy="96" r="6"/>
+<rect class="tile" x="52" y="48" width="96" height="96" rx="18"/>
+<g class="icon"><circle cx="100" cy="96" r="24"/><rect x="92" y="92" width="16" height="12" rx="4"/><path d="M92 98H76 M108 98H124 M100 104V120"/></g>
+<text class="name" x="100" y="178" text-anchor="middle">Game telemetry</text>
+<text class="num" x="100" y="202" text-anchor="middle">01</text>
+<rect class="tile" x="252" y="48" width="96" height="96" rx="18"/>
+<g class="icon"><path d="M276 82 q6 -16 12 0 t12 0 t12 0 t12 0"/><path d="M276 96 q6 -10 12 0 t12 0 t12 0 t12 0"/><path d="M276 110 q6 -4 12 0 t12 0 t12 0 t12 0" stroke="#ff6a1a"/></g>
+<text class="name" x="300" y="178" text-anchor="middle">Motion cueing</text>
+<text class="num" x="300" y="202" text-anchor="middle">02</text>
+<rect class="tile" x="452" y="48" width="96" height="96" rx="18"/>
+<g class="icon"><path d="M482 82H518" stroke-width="4"/><path d="M474 114H526"/><path d="M478 114L486 82M490 114L500 82M496 114L486 82M504 114L514 82M510 114L500 82M522 114L514 82"/></g>
+<text class="name" x="500" y="178" text-anchor="middle">Kinematics</text>
+<text class="num" x="500" y="202" text-anchor="middle">03</text>
+<rect class="tile" x="652" y="48" width="96" height="96" rx="18"/>
+<g class="icon"><rect x="686" y="82" width="28" height="28" rx="4"/><rect x="695" y="91" width="10" height="10" rx="2"/><path d="M686 88H678 M714 88H722 M692 82V74 M692 110V118M686 96H678 M714 96H722 M700 82V74 M700 110V118M686 104H678 M714 104H722 M708 82V74 M708 110V118"/></g>
+<text class="name" x="700" y="178" text-anchor="middle">Control</text>
+<text class="num" x="700" y="202" text-anchor="middle">04</text>
+<rect class="tile" x="852" y="48" width="96" height="96" rx="18"/>
+<g class="icon"><circle cx="892" cy="104" r="14"/><circle cx="892" cy="104" r="3"/><path d="M892 104L914 88" stroke-width="5"/><circle cx="914" cy="88" r="4"/><path d="M914 88L920 68"/></g>
+<text class="name" x="900" y="178" text-anchor="middle">Actuation</text>
+<text class="num" x="900" y="202" text-anchor="middle">05</text>
+<rect class="tile" x="1052" y="48" width="96" height="96" rx="18"/>
+<g class="icon"><path d="M1076 90H1124" stroke-width="4"/><path d="M1088 84H1106 L1112 66"/><path d="M1082 90L1076 118 M1090 90L1098 118 M1110 90L1102 118 M1118 90L1124 118"/><path d="M1072 118H1128"/></g>
+<text class="name" x="1100" y="178" text-anchor="middle">The platform</text>
+<text class="num" x="1100" y="202" text-anchor="middle">06</text>
+</svg>

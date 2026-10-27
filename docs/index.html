@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SPASIX</title>
+<meta name="description" content="SPASIX: a six-axis motion platform that moves a person with the car's every move.">
+<link rel="icon" href="media/spasix_favicon_32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="media/spasix_favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="media/spasix_apple_touch_180.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="bar">
+  <a class="brand" href="#top"><img src="media/spasix_mark_white.png" width="44" height="44" alt=""><span>SPASIX</span></a>
+  <a class="bar-cta" href="https://www.linkedin.com/company/spasix/" target="_blank" rel="noopener">Follow on LinkedIn</a>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <video class="bg" data-clip="hero" muted loop playsinline preload="auto" poster="media/hero.jpg">
+      <source src="media/hero.mp4" type="video/mp4">
+      <source src="media/hero.webm" type="video/webm">
+    </video>
+    <div class="shade"></div>
+    <div class="hero-text reveal">
+      <h1>Feel the lap</h1>
+      <p>A six-axis motion platform, driven by car simulator signals.</p>
+    </div>
+    <a class="scroll-hint" href="#moves" aria-label="Scroll">&#8595;</a>
+  </section>
+
+  <section class="panel" id="moves">
+    <div class="copy reveal">
+      <h2>It moves throughout the lap</h2>
+      <p>Braking, turning, every bump in the road &mdash; the platform leans, lifts and turns under the rider, from the game's own telemetry.</p>
+    </div>
+    <figure class="clip reveal">
+      <video data-clip="drive" muted loop playsinline preload="metadata" poster="media/drive.jpg">
+        <source src="media/drive.mp4" type="video/mp4">
+        <source src="media/drive.webm" type="video/webm">
+      </video>
+    </figure>
+  </section>
+
+  <section class="panel flip" id="mechanism">
+    <div class="copy reveal">
+      <h2>Six arms, one seat</h2>
+      <p>Six motors turn six cranks, carrying the platform. Between them, every way a car can move.</p>
+    </div>
+    <figure class="clip reveal">
+      <video data-clip="detail" muted loop playsinline preload="metadata" poster="media/detail.jpg">
+        <source src="media/detail.mp4" type="video/mp4">
+        <source src="media/detail.webm" type="video/webm">
+      </video>
+    </figure>
+  </section>
+
+  <section class="panel" id="fit">
+    <div class="copy reveal">
+      <h2>Made to fit</h2>
+      <p>Adjustable pedals and steering wheel improve driving comfort.</p>
+    </div>
+    <div class="pair reveal">
+      <figure class="clip">
+        <video data-clip="fit" muted loop playsinline preload="metadata" poster="media/fit.jpg">
+          <source src="media/fit.mp4" type="video/mp4">
+          <source src="media/fit.webm" type="video/webm">
+        </video>
+      </figure>
+      <figure class="clip">
+        <video data-clip="reach" muted loop playsinline preload="metadata" poster="media/reach.jpg">
+          <source src="media/reach.mp4" type="video/mp4">
+          <source src="media/reach.webm" type="video/webm">
+        </video>
+      </figure>
+    </div>
+  </section>
+
+  <!-- A. How it works -->
+  <section class="wide" id="how">
+    <div class="copy reveal">
+      <h2>How it works</h2>
+      <p>From the game to the seat.</p>
+    </div>
+    <figure class="flow reveal">
+      <picture>
+        <source media="(max-width: 820px)" srcset="how_it_works_tall.svg">
+        <img src="how_it_works.svg"
+          alt="Game telemetry, motion cueing, kinematics, control, actuation, the platform: the signal from the game to the motors, then motion from the motors to the seat.">
+      </picture>
+    </figure>
+    <ol class="steps reveal">
+      <li><span class="n">01</span><b>Game telemetry</b>The game provides vehicle telemetry.</li>
+      <li><span class="n">02</span><b>Motion cueing</b>Filters keep what a driver can feel.</li>
+      <li><span class="n">03</span><b>Kinematics</b>The expected seat pose determines the angle of each of the six cranks.</li>
+      <li><span class="n">04</span><b>Control</b>A controller turns six angles into six motors' commands.</li>
+      <li><span class="n">05</span><b>Actuation</b>Six servo motors turn six cranks.</li>
+      <li><span class="n">06</span><b>The platform</b>Six rods move the seat &mdash; and the rider with it.</li>
+    </ol>
+  </section>
+
+  <!-- C. Engineered with AI agents -->
+  <section class="wide" id="engineered">
+    <div class="copy reveal">
+      <h2>Developed utilizing the potential of AI agents</h2>
+      <p>Virtual analysis is performed on SPASIX to optimize materials and cost, with AI agents working alongside the development
+      engineer: they help subject it to the hardest test a lap can present, measure structural deflection, and remove material
+      until every component holds within its margin.</p>
+    </div>
+    <!-- the recorded laps' hardest moment through the base and its cranks (design/fem/lower/twin_sum.py --clip) -->
+    <figure class="solo reveal"><video data-clip="fem_lap" muted loop playsinline preload="metadata" poster="media/fem_lap.jpg" aria-label="The base and its cranks through the hardest moment of a recorded lap, coloured by stress.">
+        <source src="media/fem_lap.mp4" type="video/mp4"><source src="media/fem_lap.webm" type="video/webm"></video>
+      <figcaption>Structural analysis based on dynamic loads extracted from a digital twin.</figcaption></figure>
+  </section>
+</main>
+
+<footer class="foot">
+  <span>SPASIX</span>
+  <span class="muted">Rendered from the design model.</span>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
